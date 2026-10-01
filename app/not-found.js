@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { EnquiryLink } from "@/components/site";
+
+export default function NotFound() {
+  return <section className="grid min-h-[65vh] place-items-center bg-cream px-5 py-20 text-center"><div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-700">404 / Page not found</p><h1 className="mt-5 font-display text-6xl leading-none tracking-[-0.04em] text-ink sm:text-8xl">This page has moved on.</h1><p className="mx-auto mt-6 max-w-md text-sm leading-7 text-ink/60">The address may be incorrect, or the page may no longer be available.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><Link href="/" className="inline-flex min-h-12 items-center border border-ink/25 px-6 text-xs font-semibold uppercase tracking-[0.12em]">Go home</Link><Link href="/products" className="inline-flex min-h-12 items-center border border-ink/25 px-6 text-xs font-semibold uppercase tracking-[0.12em]">View products</Link><EnquiryLink /></div></div></section>;
+}

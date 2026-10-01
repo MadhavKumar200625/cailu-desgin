@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #f5f1eb;
+  --color-ink: #242220;
+  --color-olive-50: #f1efeb;
+  --color-olive-700: #66756b;
+  --color-olive-800: #35463f;
+  --color-olive-950: #202624;
+  --color-lime-200: #f1c3ae;
+  --color-lime-300: #e36d50;
+  --color-lime-500: #bd503c;
+  --color-stone-200: #dfd9d1;
+  --font-sans: "Avenir Next", "Trebuchet MS", sans-serif;
+  --font-display: "Bodoni 72", "Didot", Georgia, serif;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { margin: 0; }
+  img { display: block; }
+  button, a, summary { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: #c7df8a; color: #1d211b; }
+}
+
+@layer components {
+  .nav-link { @apply text-[11px] font-semibold uppercase tracking-[0.1em] text-ink/70 transition hover:text-olive-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-olive-700; }
+  .mobile-nav-link { @apply block border-b border-ink/10 py-4 text-sm font-medium text-ink; }
+  .skip-link { @apply fixed left-4 top-4 z-[100] -translate-y-20 bg-lime-300 px-4 py-3 text-sm font-semibold text-ink focus:translate-y-0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

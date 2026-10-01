@@ -1,0 +1,5 @@
+import { Breadcrumbs, SectionHeading } from "@/components/site";
+
+export function LegalPage({ title, description, notice }) {
+  return <section className="bg-cream px-5 pb-20 pt-8 sm:px-8 sm:pb-28 lg:px-12"><div className="mx-auto max-w-4xl"><Breadcrumbs items={[{ label: title }]} /><SectionHeading eyebrow="Editable legal placeholder" title={title} description={description} /><div className="mt-10 border-l-2 border-lime-500 bg-white p-6 sm:p-8"><p className="text-sm font-semibold text-ink">{notice}</p><p className="mt-4 text-sm leading-7 text-ink/65">This page is a draft placeholder and is not legal advice. Replace it with terms reviewed for the actual business, jurisdictions, services, data practices and applicable law before publishing the site.</p><p className="mt-5 text-xs uppercase tracking-[0.1em] text-ink/45">Last reviewed: [ADD DATE]</p></div></div></section>;
+}
